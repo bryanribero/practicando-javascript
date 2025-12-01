@@ -9,6 +9,8 @@ function Accumulator(startingValue) {
 
 const acumulador = new Accumulator(0)
 
-console.log(acumulador.read(5).read(2).value)
+const acumulador2 = new Accumulator(100)
+
+console.log(acumulador2.read(5).read(2).value)
 
 console.log(acumulador.read(1).value)
