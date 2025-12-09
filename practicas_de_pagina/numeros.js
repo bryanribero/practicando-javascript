@@ -18,4 +18,14 @@ function lectura() {
   return numero
 }
 
-lectura()
+function readNumber() {
+  let numero
+
+  do {
+    numero = prompt('Ingrese un numero:', '')
+
+    alert(numero)
+  } while (isNaN(numero))
+}
+
+readNumber()
