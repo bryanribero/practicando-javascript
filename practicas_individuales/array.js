@@ -25,3 +25,11 @@ const getMaxSubSum = (arr) => {
 }
 
 console.log(getMaxSubSum([100, -9, 2, -3, 5]))
+
+const camelize = (str) =>
+  str
+    .split('-')
+    .map((element, index) => (index == 0 ? element : element[0].toUpperCase() + element.slice(1)))
+    .join('')
+
+console.log(camelize('list-style-image'))
