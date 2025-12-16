@@ -53,3 +53,7 @@ function filterRangeInPlace(arr, a, b) {
 }
 
 console.log(filterRangeInPlace([5, 3, 8, 1], 1, 4))
+
+const descOrder = (arr) => arr.sort((a, b) => b - a)
+
+console.log(descOrder([2, 3, 6, 9, 33, -21, -54]))
