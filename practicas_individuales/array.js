@@ -8,7 +8,7 @@ styles[Math.floor((styles.length - 1) / 2)] = 'Classic'
 styles.shift()
 styles.unshift('rap', 'reggae')
 
-console.log(styles)
+// console.log(styles)
 
 const getMaxSubSum = (arr) => {
   let maxSum = 0
@@ -24,7 +24,7 @@ const getMaxSubSum = (arr) => {
   return maxSum
 }
 
-console.log(getMaxSubSum([100, -9, 2, -3, 5]))
+// console.log(getMaxSubSum([100, -9, 2, -3, 5]))
 
 const camelize = (str) =>
   str
@@ -38,7 +38,7 @@ function filterRange(arr, a, b) {
   return arr.filter((e) => e >= a && e <= b)
 }
 
-console.log(filterRange([1, 2, 3, 4, 5, 6, 7, 8], 4, 6))
+// console.log(filterRange([1, 2, 3, 4, 5, 6, 7, 8], 4, 6))
 
 function filterRangeInPlace(arr, a, b) {
   for (let i = 0; i < arr.length; i++) {
@@ -52,8 +52,38 @@ function filterRangeInPlace(arr, a, b) {
   return arr.sort()
 }
 
-console.log(filterRangeInPlace([5, 3, 8, 1], 1, 4))
+// console.log(filterRangeInPlace([5, 3, 8, 1], 1, 4))
 
 const descOrder = (arr) => arr.sort((a, b) => b - a)
 
-console.log(descOrder([2, 3, 6, 9, 33, -21, -54]))
+// console.log(descOrder([2, 3, 6, 9, 33, -21, -54]))
+
+function Calculator() {
+  this.methods = {
+    '-': (a, b) => a - b,
+    '+': (a, b) => a + b
+  }
+
+  this.calculate = (str) => {
+    const arrStr = str.split(' '),
+      a = +arrStr[0],
+      op = arrStr[1],
+      b = +arrStr[2]
+
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+      return NaN
+    }
+
+    return this.methods[op](a, b)
+  }
+
+  this.addMethod = function (name, func) {
+    this.methods[name] = func
+  }
+}
+
+const calculadora = new Calculator()
+
+calculadora.addMethod('*', (a, b) => a * b)
+
+console.log(calculadora.calculate('4 * 2'))
