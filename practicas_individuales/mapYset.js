@@ -2,7 +2,7 @@ const unique = (arr) => Array.from(new Set(arr))
 
 let values = ['Hare', 'Krishna', 'Hare', 'Krishna', 'Krishna', 'Krishna', 'Hare', 'Hare', ':-O']
 
-console.log(unique(values))
+// console.log(unique(values))
 
 const aclean = (arr) => {
   let map = new Map()
@@ -18,4 +18,10 @@ const aclean = (arr) => {
 
 let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares']
 
-console.log(aclean(arr))
+// console.log(aclean(arr))
+
+let newMap = new Map([['name', 'jose']])
+
+let keys = Array.from(newMap.keys())
+
+console.log(keys)
