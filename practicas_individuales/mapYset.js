@@ -25,3 +25,13 @@ let newMap = new Map([['name', 'jose']])
 let keys = Array.from(newMap.keys())
 
 console.log(keys)
+
+const arrayx = [
+  ['MEX', 'CAN'],
+  ['UK', 'GER'],
+  ['CAN', 'UK']
+]
+
+const newarr = arrayx[0]
+
+console.log(newarr)
