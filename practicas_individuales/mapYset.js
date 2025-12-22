@@ -35,3 +35,16 @@ const arrayx = [
 const newarr = arrayx[0]
 
 console.log(newarr)
+
+let jhon = {
+  name: 'jhon'
+}
+
+const arrWeak = [jhon]
+
+const weakMap = new WeakMap()
+weakMap.set(jhon, 'Este es el objeto')
+
+jhon = null
+
+console.log(weakMap.get())
