@@ -17,3 +17,7 @@ let salaries = {
 const sumSalaries = Object.values(salaries).reduce((acc, next) => acc + next, 0)
 
 console.log(sumSalaries)
+
+const countProp = Object.keys(salaries).length
+
+console.log(countProp)
