@@ -24,3 +24,9 @@ for (let i = 0; i < 100000; i++) {
 const end = Date.now()
 
 console.log(`El bucle tardo ${end - start} ms`)
+
+console.log(start)
+
+const fechaActual = new Date(2012, 1, 20, 3, 12)
+
+console.log(fechaActual.toString())
