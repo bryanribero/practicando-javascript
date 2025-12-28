@@ -41,3 +41,11 @@ function getLocalDay(date) {
 let date2 = new Date(2012, 0, 3)
 
 console.log(getLocalDay(date2))
+
+let date3 = new Date(2015, 0, 2)
+
+function getDateAgo(date, days) {
+  return new Date(date.getTime() - days * 86400000)
+}
+
+console.log(getDateAgo(date3, 365).toString())
