@@ -1,24 +1,17 @@
-function getProductDB(id) {
-  if (id < 0 || id > 100) {
-    throw new Error('ID no valido')
+function obtenerProducto(id) {
+  if (id < 0) {
+    throw new Error('ID no válido', { cause: 'ID negativo proporcionado' })
+  } else if (id > 100) {
+    throw new Error('Registro no encontrado', {
+      cause: 'ID mayor a 100 proporcionado'
+    })
   }
-
-  return { id: id, producto: 'producto ejemplo' }
-}
-
-function getProduct(id) {
-  try {
-    return getProductDB(id)
-  } catch (errorOrigin) {
-    throw new Error(`Error al obtener el producto con el ID: ${id}`, { cause: errorOrigin })
-  }
+  return { id, nombre: 'Producto' }
 }
 
 try {
-  const producto = getProduct(-5)
-  console.log(`Producto: ${producto}`)
-} catch (err) {
-  console.log('Error capturado:', err.message)
-
-  console.log('Error original:', err.cause.message)
+  const producto = obtenerProducto(-5)
+} catch (error) {
+  console.error('Error al obtener el producto:', error.message)
+  console.error('Causa:', error.cause)
 }
