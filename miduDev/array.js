@@ -13,7 +13,9 @@ const mapEstudiantes = estudiantes.values().map((estudiante) => {
   }
 })
 
-for (const estudiante of mapEstudiantes) {
-  console.log(estudiante)
-  if (estudiante.nombre === 'Pablo') break
-}
+console.log(mapEstudiantes.next().value)
+
+// for (const estudiante of mapEstudiantes) {
+//   console.log(estudiante)
+//   if (estudiante.nombre === 'Pablo') break
+// }
