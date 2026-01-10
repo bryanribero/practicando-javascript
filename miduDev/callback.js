@@ -9,4 +9,16 @@ function getData() {
   return data
 }
 
-getData()
+// getData()
+
+const obtenerDato = (callback) => {
+  setTimeout(() => {
+    callback()
+  }, 1000)
+}
+
+const consola = () => {
+  console.log('Hola despues de un tiempo')
+}
+
+obtenerDato(consola)
