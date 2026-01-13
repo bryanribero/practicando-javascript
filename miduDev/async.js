@@ -1,13 +1,13 @@
 import fs from 'fs/promises' //Necesario importar las promesas
 
 async function getData() {
-  const data = await fs.readFile('dat.txt', 'utf-8')
+  try {
+    const data = await fs.readFile('dat.txt', 'utf-8')
 
-  return data
+    console.log(data)
+  } catch (err) {
+    console.error(err)
+  }
 }
 
 getData()
-  .then((data) => {
-    console.log(data)
-  })
-  .catch((err) => console.log('el error es:' + err))
