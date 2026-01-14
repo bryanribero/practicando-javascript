@@ -10,4 +10,10 @@ async function getData() {
   }
 }
 
-getData()
+async function ejecutarAsync() {
+  await console.log('Cargando data')
+  await console.log('-------------------')
+  await getData()
+}
+
+ejecutarAsync()
