@@ -14,3 +14,15 @@ function promesaDeUnSaludo() {
 }
 
 promesaDeUnSaludo()
+
+function prometemeAmistad() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() < 0.8) {
+      resolve('Somos amigos')
+    } else {
+      reject(new Error('No somos amigos'))
+    }
+  })
+}
+
+console.log(prometemeAmistad())
