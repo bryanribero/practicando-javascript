@@ -10,4 +10,6 @@ function promesaDeNumero() {
   })
 }
 
-promesaDeNumero().then((response) => console.log(response))
+promesaDeNumero()
+  .then((response) => console.log(response))
+  .catch((err) => console.log(err))
