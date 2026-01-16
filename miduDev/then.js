@@ -13,3 +13,4 @@ function promesaDeNumero() {
 promesaDeNumero()
   .then((response) => console.log(response))
   .catch((err) => console.log(err))
+  .finally(() => console.log('Promesa terminada'))
