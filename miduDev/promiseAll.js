@@ -1,4 +1,5 @@
-//ejemplo para combinar las promesas en promise all. Las promesa se enviara cuando se resuelvan todas y se enviaran segun su posicion en el array
+// Ejemplo para combinar las promesas en promise all.
+// Las promesa se enviara cuando se resuelvan todas y se enviaran segun su posicion en el array
 
 async function generadorPdf() {
   try {
