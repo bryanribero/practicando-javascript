@@ -10,7 +10,15 @@ function promesaDeNumero() {
   })
 }
 
+function agregarEmojin(mensaje) {
+  return new Promise((resolve, reject) => {
+    resolve(`${mensaje} 👍`)
+  })
+}
+
 promesaDeNumero()
-  .then((response) => console.log(response))
+  .then((response) => {
+    agregarEmojin(response).then((mensaje) => console.log(mensaje))
+  })
   .catch((err) => console.log(err))
   .finally(() => console.log('Promesa terminada'))
