@@ -16,4 +16,13 @@ async function ejecutarAsync() {
   await getData()
 }
 
-ejecutarAsync()
+// ejecutarAsync()
+
+// Comenzando con async
+
+//async siempre retorna una promesa
+async function getUrl() {
+  return 'http://localhost:3000'
+}
+
+getUrl().then((response) => console.log(response))

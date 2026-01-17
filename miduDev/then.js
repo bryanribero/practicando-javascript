@@ -17,9 +17,7 @@ function agregarEmojin(mensaje) {
 }
 
 promesaDeNumero()
-  .then((response) => {
-    return agregarEmojin(response)
-  })
+  .then((response) => agregarEmojin(response))
   .then((mensaje) => console.log(mensaje))
   .catch((err) => console.log(err))
   .finally(() => console.log('Promesa terminada'))
