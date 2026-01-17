@@ -7,6 +7,8 @@ async function getData() {
     console.log(data)
   } catch (err) {
     console.error(err)
+  } finally {
+    console.log('Final de la promesa')
   }
 }
 
