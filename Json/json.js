@@ -4,11 +4,18 @@ console.log(fecha.toJSON())
 
 const schedule = {
   meeting: [
-    { name: 'Reunion', date: new Date(2026, 1, 15, 14, 0, 0) },
-    { name: 'Salida', date: new Date(2026, 1, 15, 16, 0, 0) }
+    { name: 'Reunion', date: new Date(Date.UTC(2026, 1, 15, 14, 0, 0)) },
+    { name: 'Salida', date: new Date(Date.UTC(2026, 1, 15, 16, 0, 0)) }
   ]
 }
 
 const scheduleJson = JSON.stringify(schedule)
 
 console.log(scheduleJson)
+
+const scheduleParse = JSON.parse(scheduleJson, (key, value) => {
+  if (key == 'date') return new Date(value)
+  return value
+})
+
+console.log(scheduleParse)
