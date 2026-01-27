@@ -11,4 +11,15 @@ function sumTo(x) {
   return sum
 }
 
-console.log(sumTo(4))
+function sumToRecursivo(n) {
+  return n == 1 ? n : n + sumToRecursivo(n - 1)
+}
+
+console.log(sumToRecursivo(1))
+
+function sumAritmetica(a, d, n) {
+  const suma = (n / 2) * (2 * a + (n - 1) * d)
+  return suma
+}
+
+console.log(sumAritmetica(1, 2, 3))
