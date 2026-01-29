@@ -41,6 +41,21 @@ function prevPrintList(list) {
   console.log(list.value)
 }
 
-prevPrintList(list)
+/* prevPrintList(list) */
 
-function prevPrintListBucle(list) {}
+function prevPrintListBucle(list) {
+  const array = []
+  let tmp = list
+
+  while (tmp) {
+    array.push(tmp.value)
+
+    tmp = tmp.next
+  }
+
+  for (let i = array.length - 1; i >= 0; i--) {
+    console.log(array[i])
+  }
+}
+
+prevPrintListBucle(list)
