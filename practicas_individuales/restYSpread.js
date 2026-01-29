@@ -8,3 +8,9 @@ function sum(...sum) {
 }
 
 console.log(sum(1, 2, 3))
+
+const arr1 = [1, 2, 3]
+
+const copy = [...arr1]
+
+console.log(copy)
