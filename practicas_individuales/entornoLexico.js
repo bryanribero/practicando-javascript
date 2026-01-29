@@ -28,3 +28,21 @@ let name = 'Pedro'
 let work = makeWorker()
 
 work()
+
+/* Al crear 2 instancias distintas de la funcion se crea 2 contextos distintos, por lo tanto cada funcion retornada 
+tiene su propio closure sobre su entorno lexico */
+function makeCounter() {
+  let count = 0
+
+  return function () {
+    return count++
+  }
+}
+
+let count1 = makeCounter()
+let count2 = makeCounter()
+
+console.log(count1())
+console.log(count1())
+
+console.log(count2())
