@@ -14,3 +14,11 @@ const arr1 = [1, 2, 3]
 const copy = [...arr1]
 
 console.log(copy)
+
+function prueba(...params) {
+  let [a, b, c, ...demas] = params
+
+  console.log(a, b, c, demas)
+}
+
+prueba(1, 2, 3, 4, 5)
