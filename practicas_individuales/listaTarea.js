@@ -21,4 +21,26 @@ function printListBucle(list) {
   }
 }
 
-printListBucle(list)
+/* printListBucle(list) */
+
+function printList(list) {
+  console.log(list.value)
+
+  if (list) {
+    printList(list.next)
+  }
+}
+
+/* printList(list) */
+
+function prevPrintList(list) {
+  if (list.next) {
+    prevPrintList(list.next)
+  }
+
+  console.log(list.value)
+}
+
+prevPrintList(list)
+
+function prevPrintListBucle(list) {}
