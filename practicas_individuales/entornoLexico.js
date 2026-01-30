@@ -49,6 +49,7 @@ console.log(count2())
 
 /* Se pueden recibir parametros en la segunda funcion retornada, al llamar a la funcion se debe utilizar otro () para indicar 
  el argumento de la segunda funcion */
+
 function sum(a) {
   return function (b) {
     return a + b
