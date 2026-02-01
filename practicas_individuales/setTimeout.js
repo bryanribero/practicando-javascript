@@ -21,4 +21,20 @@ function printNumber(from, to) {
   }, 1000)
 }
 
-printNumber(1, 5)
+/* printNumber(1, 5) */
+
+function PrintNumberInterval(from, to) {
+  let current = from
+
+  let timeId = setInterval(() => {
+    console.log(current)
+
+    if (current == to) {
+      clearInterval(timeId)
+    }
+
+    current++
+  }, 1000)
+}
+
+PrintNumberInterval(1, 5)
