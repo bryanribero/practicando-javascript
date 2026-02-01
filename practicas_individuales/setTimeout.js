@@ -1,4 +1,9 @@
-let timerId = setTimeout(function tick() {
+/* let timerId = setTimeout(function tick() {
   console.log('Tick')
   timerId = setTimeout(tick, 2000)
 }, 2000)
+ */
+
+setTimeout(() => console.log('Mundo'))
+
+console.log('Hola')
