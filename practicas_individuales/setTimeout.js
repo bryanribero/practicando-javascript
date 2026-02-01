@@ -37,4 +37,12 @@ function PrintNumberInterval(from, to) {
   }, 1000)
 }
 
-PrintNumberInterval(1, 5)
+/* PrintNumberInterval(1, 5) */
+
+let i = 0
+
+setTimeout(() => console.log(i))
+
+for (let j = 0; j < 10000; j++) {
+  i++
+}
