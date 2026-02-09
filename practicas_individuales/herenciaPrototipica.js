@@ -21,3 +21,11 @@ admin.fullName = 'Maria Flores'
 console.log(admin.fullName)
 
 console.log(user.fullName)
+
+console.log(Object.keys(admin))
+
+for (let prop in admin) {
+  const isOwn = Object.hasOwn(admin, prop)
+
+  isOwn ? console.log(`Es propio: ${prop}`) : console.log(`No es propio: ${prop}`)
+}
