@@ -1,11 +1,14 @@
 Function.prototype.defer = function (ms) {
-  setTimeout(() => {
-    this()
-  }, ms)
+  const fn = this
+  return function (a, b) {
+    setTimeout(() => {
+      fn(a, b)
+    }, ms)
+  }
 }
 
-function f() {
-  console.log('Hola')
+function f(a, b) {
+  console.log(a + b)
 }
 
-f.defer(1000)
+f.defer(1000)(1, 2)
